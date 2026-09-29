@@ -1,0 +1,54 @@
+#api call for creating admin
+###
+POST http://127.0.0.1:8000/admin-register/
+Content-Type: application/json
+
+{
+    "username":"superuser",
+    "email":"superuser@gmail.com",
+    "password":"superuser"
+}
+
+#api call for list turfs
+###
+GET http://127.0.0.1:8000/turfs/
+Accept: application/json
+Authorization: Basic superuser:superuser
+
+#api call for add
+###
+POST http://127.0.0.1:8000/turfs/
+Content-Type: application/json
+Authorization: Basic superuser:superuser
+
+{
+    "name":"Champions Turf",
+    "location":"Thrissur",
+    "phone":"9845345678",
+    "fee": 350
+}
+
+#api call for retrieve
+###
+GET http://127.0.0.1:8000/turfs/2/
+Accept: application/json
+Authorization: Basic superuser:superuser
+
+#api call for update
+###
+PUT http://127.0.0.1:8000/turfs/3/
+Content-Type: application/json
+Authorization: Basic superuser:superuser
+
+{
+    "name":"Champions Turf",
+    "location":"Thrissur",
+    "phone":"9845345678",
+    "fee": 400
+}
+
+#api call for delete
+###
+DELETE http://127.0.0.1:8000/turfs/2/
+Accept: application/json
+Authorization: Basic superuser:superuser
